@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{pgfplots} % Include pgfplots for plotting
+\usepackage{booktabs}
+\usepackage[a4paper, margin=1in]{geometry}  % Adjusting margins
+
+\title{ Risk Management Evaluation\\ Three-Point Estimate for Green River Bridge Construction}
+\author{by Yeonhee Jeong}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{Project Overview}
+
+This task involves preparing the bid for the construction of the Green River Bridge. To accurately estimate the project costs, I will employ the three-point estimation technique for the following activities. This method will facilitate a more reliable cost estimation by accounting for potential uncertainties and variations in each activity's duration and expenses.
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Activity} & \textbf{Best Case (€)} & \textbf{Most Likely (€)} & \textbf{Worst Case (€)} \\
+\midrule
+Terracing         & 4,500,000  & 5,000,000  & 8,000,000  \\
+Foundations       & 7,000,000  & 8,500,000  & 11,000,000 \\
+Making the Moulds & 2,500,000  & 3,000,000  & 4,000,000  \\
+Casting           & 5,000,000  & 6,500,000  & 8,000,000  \\
+Paving            & 700,000    & 1,200,000  & 2,300,000  \\
+Landscaping       & 340,000    & 550,000    & 1,000,000  \\
+\bottomrule
+\end{tabular}
+\caption{Three-Point Estimate for Green River Bridge Activities}
+\end{table}
+
+\noindent Calculate the estimated total cost for the project and the standard deviation for the total project. The three-point estimate mean (\(M\)) and standard deviation (\(S\)) are given by:
+
+\[
+M = \frac{\text{Best Case(min)} + (4 \times(\text{Most Likely Case}))  + \text{Worst Case(max)}}{6}
+\]
+\[
+S = \frac{\text{Worst Case(max)} - \text{Best Case(min)}}{6}
+\]
+
+\section*{Solution}
+
+The mean and standard deviation for each task are calculated as follows:
+
+\subsection{Terracing}
+\[
+M_{\text{Terracing}} = \frac{4,500,000 + (4 \times 5,000,000) + 8,000,000}{6} = 5,416,667
+\]
+\[
+S_{\text{Terracing}} = \frac{8,000,000 - 4,500,000}{6} = 583,333
+\]
+
+\subsection{Foundations}
+\[
+M_{\text{Foundations}} = \frac{7,000,000 + (4 \times 8,500,000) + 11,000,000}{6} = 8,666,667
+\]
+\[
+S_{\text{Foundations}} = \frac{11,000,000 - 7,000,000}{6} = 666,667
+\]
+
+\subsection{Making the Moulds}
+\[
+M_{\text{Moulds}} = \frac{2,500,000 + (4 \times 3,000,000) + 4,000,000}{6} = 3,083,333
+\]
+\[
+S_{\text{Moulds}} = \frac{4,000,000 - 2,500,000}{6} = 250,000
+\]
+
+\subsection{Casting}
+\[
+M_{\text{Casting}} = \frac{5,000,000 + (4 \times 6,500,000) + 8,000,000}{6} = 6,500,000
+\]
+\[
+S_{\text{Casting}} = \frac{8,000,000 - 5,000,000}{6} = 500,000
+\]
+
+\subsection{Paving}
+\[
+M_{\text{Paving}} = \frac{700,000 + (4 \times 1,200,000) + 2,300,000}{6} = 1,300,000
+\]
+\[
+S_{\text{Paving}} = \frac{2,300,000 - 700,000}{6} = 266,667
+\]
+
+\subsection{Landscaping}
+\[
+M_{\text{Landscaping}} = \frac{340,000 + (4 \times 550,000) + 1,000,000}{6} = 590,000
+\]
+\[
+S_{\text{Landscaping}} = \frac{1,000,000 - 340,000}{6} = 110,000
+\]
+
+\section*{Final Calculations}
+
+The total estimated cost and the standard deviation for the project are calculated by summing up the mean and variance of all tasks.
+\begin{table}[h!]
+\centering
+\resizebox{0.95\textwidth}{!}{ % Resize to 95% of text width
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Task} & \textbf{Best Case (min)} & \textbf{Most Likely (ml)} & \textbf{Worst Case (max)} & \textbf{Mean (M)} & \textbf{Standard Deviation (S)} & \textbf{Variance (S$^2$)} \\
+\midrule
+Terracing         & 4,500,000  & 5,000,000  & 8,000,000  & 5,416,667  & 583{,}333 & 340{,}000{,}000{,}000 \\
+Foundations       & 7,000,000  & 8,500,000  & 11,000,000 & 8,666,667  & 666{,}667 & 444{,}444{,}444{,}444 \\
+Making the Moulds & 2,500,000  & 3,000,000  & 4,000,000  & 3,083,333  & 250{,}000 & 62{,}500{,}000 \\
+Casting           & 5,000,000  & 6,500,000  & 8,000,000  & 6,500,000  & 500{,}000 & 250{,}000{,}000 \\
+Paving            & 700,000    & 1,200,000  & 2,300,000  & 1,300,000  & 266{,}667 & 71{,}111{,}111 \\
+Landscaping       & 340,000    & 550,000    & 1,000,000  & 590,000    & 110{,}000 & 12{,}100{,}000 \\
+\midrule
+\textbf{Total} & & & & \(\sum M = €25,556,667\) &  & \(\sum S^2 = 1,180,444,444\) \\
+\bottomrule
+\end{tabular}
+}
+\caption{Three-Point Estimate Calculations for Green River Bridge}
+\end{table}
+\[
+\text{\textbf{Total Mean}} = 5,416,667 + 8,666,667 + 3,083,333 + 6,500,000 + 1,300,000 + 590,000 = \textbf{€25,556,667}
+\]
+
+\[
+\text{\textbf{Total Variance}} = 583,333^2 + 666,667^2 + 250,000^2 + 500,000^2 + 266,667^2 + 110,000^2 = 1,180,444,444
+\]
+
+\[
+\text{\textbf{Total Standard Deviation(S)}} = \sqrt{1,180,444,444} = 1,086,477
+\]
+
+
+\subsubsection*{\textit{Thus, the total estimated cost is \textbf{€25,556,667}, and the total standard deviation is \textbf{€1,086,477}.}}
+
+\section*{Interpretation of Results}
+The total estimated cost for building the Green River Bridge is €25,556,667. This number is an average of what we expect to spend based on different project activities.
+
+We also have a standard deviation of €1,086,477. This value shows how much the actual costs might vary from the average estimate. A larger standard deviation means that the actual costs could be quite different from our estimate—by about €1 million.
+
+This variation highlights the need for careful budgeting. It is a good idea to set aside extra money to cover unexpected costs that may come up due to things like price changes in materials, labor issues, or bad weather.
+
+When sharing these results with others, it is important to explain both the estimated cost and the uncertainties. Knowing the average cost along with the possible variations will help everyone make better decisions and set realistic expectations for the project. This approach also builds trust and keeps everyone informed throughout the project's progress.
+
+
+
+
+
+\end{document}
